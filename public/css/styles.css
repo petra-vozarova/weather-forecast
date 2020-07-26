@@ -1,0 +1,102 @@
+body{
+    background-color: #CCC;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin:0;
+    padding:0;
+
+}
+#container{
+    width: 100%;
+    top:0;
+    padding: 0;
+    height: 92vh;
+    min-height: 92vh;
+    max-height:92vh;
+    background-image: url('https://images.unsplash.com/photo-1534794048419-48e110dca88e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1248&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-content{
+    background-color:#C0C0C0;
+    opacity: 0.9;
+    margin: 5% auto;
+    min-height:45vh;
+    height: auto;
+    width:50%;
+    justify-content:middle;
+}
+h1 {
+    font-size: 3.5em;
+    margin: auto;
+    padding-top: 4%;
+    color: rgb(221, 147, 9);
+    text-shadow: 2px 2px #000;
+}
+
+h3{
+    padding-top: 5%;
+    font-size: 1.5em;
+}
+
+input{
+    width: 50%;
+    min-height:3em;
+    background-color: rgb(208, 243, 208);
+    color: black;
+    font-size:1em;
+    text-align: center;
+}
+
+#info{
+    font-size: 1.5em;
+}
+
+form{
+    margin: 3em auto;
+}
+
+.response{
+    font-size: 1.2em;
+    line-height: 2em;
+    margin: 0.5em;
+    font-weight: 600;
+    padding-bottom: 1em;
+}
+
+#mesageOne{
+    font-weight: 600;
+    font-size: 1.6em;
+}
+#messageTwo{
+    margin: 0.5em;
+    text-align: justify;
+}
+
+button{
+    min-height:3em;
+    width:30%;
+    cursor: pointer;
+    font-size:1em;
+}
+
+button:hover{
+    background-color: rgb(208, 243, 208);
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    left:40vw;
+    z-index:100;
+}
+
+@media screen and (min-width:1500px){
+    .main-content{
+        width: 30%;
+    }
+}
+
+
+
