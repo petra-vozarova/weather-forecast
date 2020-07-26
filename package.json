@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/petra-vozarova/weather-forecast/issues"
   },
-  "homepage": "https://github.com/petra-vozarova/weather-forecast#readme",
+  "homepage": "https://github.com/petra-vozarova/weather-forecast",
   "dependencies": {
     "express": "^4.17.1",
     "hbs": "^4.1.1",
