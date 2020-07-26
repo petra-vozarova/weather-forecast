@@ -11,9 +11,8 @@ body{
     width: 100%;
     top:0;
     padding: 0;
-    height: 92vh;
+    height: auto;
     min-height: 92vh;
-    max-height:92vh;
     background-image: url('https://images.unsplash.com/photo-1534794048419-48e110dca88e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1248&q=80');
     background-repeat: no-repeat;
     background-size: cover;
@@ -98,5 +97,13 @@ footer{
     }
 }
 
+@media screen and (max-width:900px){
+    footer{
+        display: none;
+    }
+    .main-content{
+        width: 85%;
+    }
+}
 
 
