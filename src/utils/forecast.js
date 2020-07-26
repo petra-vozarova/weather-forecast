@@ -15,7 +15,7 @@ const forecast =(latitude, longitude, callback)=> {
             const rain = body.current.precip;
             const wind = body.current.wind_speed;
             const humidity =body.current.humidity;
-            callback( undefined, 'Today weather is expected to be: ' + description + '. Current temerature is ' + temperature + '°C. The feeling temperature is more likely to be around ' + feeling + '°C. The chances of percipation today  are ' +rain + '%. The strenght of the current wind is ' + wind + 'm/s. The expected level of humidity is ' + humidity + '%.')
+            callback( undefined, 'Today, the weather is expected to be: ' + description + '. Current temperature is ' + temperature + '°C. The feeling temperature is likely to be around ' + feeling + '°C. The chances of precipitation today  are ' +rain + '%. The strenght of the current wind is ' + wind + 'm/s. The expected level of humidity is ' + humidity + '%. Enjoy the weather!')
         }
     })
 }
