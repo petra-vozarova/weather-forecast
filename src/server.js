@@ -7,7 +7,7 @@ const geocode = require('./utils/geocode')
  console.log(__dirname)
 // console.log(__filename)
 console.log(path.join(__dirname, '../public'))
-const app = express()
+const server = express()
 
 //extracting port from heroku or 3000 for local if not run in heroku
 const port = process.env.PORT || 3000
@@ -18,21 +18,21 @@ const viewsPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
 
 //setup handlebars engine and views location
-app.set('views', viewsPath)
-app.set('view engine','hbs')
+server.set('views', viewsPath)
+server.set('view engine','hbs')
 hbs.registerPartials(partialsPath)
 
 //setup static directory to serve
-app.use(express.static(publicDirectoryPath))
+server.use(express.static(publicDirectoryPath))
 
-app.get('', (req, res)=>{
+server.get('', (req, res)=>{
     res.render('index',{
         title: 'Weather Forecast',
         name: 'Petra Vozarova'
     })
 })
 
-app.get('/weather', (req, res)=> {
+server.get('/weather', (req, res)=> {
     if(!req.query.address){
        return res.send({
             error: 'you must enter a valid address'
@@ -56,8 +56,8 @@ app.get('/weather', (req, res)=> {
     })
 })
 
-app.get('*', (req, res)=>{
-    res.render('404', {
+server.get('*', (req, res)=>{
+    res.render('error', {
         title: '404',
         name: 'Petra Vozarova',
         errorMessage: 'Page not found'
@@ -65,6 +65,6 @@ app.get('*', (req, res)=>{
 })
 
 
-app.listen(port, ()=>{
+server.listen(port, ()=>{
     console.log('Server is up on port ' + port)
 })
