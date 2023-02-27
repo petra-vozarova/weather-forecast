@@ -4,9 +4,7 @@ const hbs= require('hbs')
 const forecast = require('./utils/forecast')
 const geocode = require('./utils/geocode')
 
- console.log(__dirname)
-// console.log(__filename)
-console.log(path.join(__dirname, '../public'))
+// console.log(path.join(__dirname, '../public'))
 const server = express()
 
 //extracting port from heroku or 3000 for local if not run in heroku
@@ -41,17 +39,17 @@ server.get('/weather', (req, res)=> {
     geocode(req.query.address, (error,{latitude, longitude, location}={})=>{
         if(error){
             return res.send({error})
-        } 
+        }
         forecast(latitude, longitude,(error, forecastData) =>{
             if(error){
                 return res.send({error})
             }
-
             res.send({
                 forecast: forecastData,
                 location,
                 address: req.query.address
             })
+
         })
     })
 })
@@ -68,3 +66,5 @@ server.get('*', (req, res)=>{
 server.listen(port, ()=>{
     console.log('Server is up on port ' + port)
 })
+
+module.exports = server;
